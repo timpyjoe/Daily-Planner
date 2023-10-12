@@ -6,7 +6,7 @@ This is a fairly simple webpage that acts as a daily planner/scheduler. It was a
 
 ## Usage
 
-This webpage can by access by going to [this link.](timpyjoe.github.io/Daily-Planner)
+This webpage can by access by going to [this link.](https://timpyjoe.github.io/Daily-Planner)
 Below is a screenshot of what the webpage might look like while it is being used.
 ![screenshot of webpage with sample text](./Assets/images/preview.png)
 

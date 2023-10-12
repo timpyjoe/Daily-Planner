@@ -16,9 +16,19 @@ $(function () {
       pastNoon = "PM"
     }
 
+    // Changes the color of the time block depending on the time of day
+    var color = "";
+    if (i < dayjs().hour()) {
+      color = "past";
+    } else if (i === dayjs().hour()) {
+      color = "present";
+    } else {
+      color = "future";
+    }
+
     // Adds the actual time block to the screen
     $("#time-blocks").append(`
-    <div id=${nextID} class="row time-block">
+    <div id=${nextID} class="row time-block ${color}">
       <div class="col-2 col-md-1 hour text-center py-3">${imperial+pastNoon}</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
@@ -29,14 +39,6 @@ $(function () {
     // Populates the time block text area with data saved into local storage
     $(`#${nextID}`).children("textarea").val(localStorage.getItem(nextID));
 
-    // Changes the color of the time block depending on the time of day
-    if (i < dayjs().hour()) {
-      $(`#${nextID}`).addClass("past");
-    } else if (i = dayjs().hour()) {
-      $(`#${nextID}`).addClass("present");
-    } else {
-      $(`#${nextID}`).addClass("future");
-    }
 
   }
 
@@ -51,6 +53,7 @@ $(function () {
 
   // Displays the current date at the top of the screen 
   var today = dayjs();
+
   $("#currentDay").text(today.format("dddd, MMM D"));
   // This is missing the ordinal suffix because I couldn't figure out how to use dayjs
   // advancedFormat

@@ -2,19 +2,14 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This is a fairly simple webpage that acts as a daily planner/scheduler. It was a great way to practice my skills using jQuery and Day.js 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+This webpage can by access by going to [this link.](timpyjoe.github.io/Daily-Planner)
+Below is a screenshot of what the webpage might look like while it is being used.
+![screenshot of webpage with sample text](./Assets/images/preview.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+To uses this webpage, all the user has to do is populate the given time blocks with things to do at that time. A gray block represents an hour that is in the past, a red block represents the current hour, and a green block represents future hours.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Upon entering something into a given block, the user can click the 'save' button to store the data in local storage. If the page is refreshed or closed and reopened, the data will be read from local storage and will repopulate the planner. The 'save' button must be clicked after any changes are made to the text area to update the local storage.
